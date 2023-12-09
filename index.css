@@ -1,0 +1,76 @@
+body {
+    padding: 125px;
+    margin: 0;
+}
+
+.loginContainer {
+    border-radius: 15px;
+    padding: 125px;
+    text-align: center;
+    background-color: slateblue;
+    width: 600px;
+    margin: auto;
+}
+
+.registerContainer {
+    border-radius: 15px;
+    padding: 125px;
+    text-align: center;
+    background-color: slateblue;
+    width: 600px;
+    margin: auto;
+}
+
+.registerContainer h3 {
+    font-family: sans-serif;
+    color: white;
+    font-size: 25px;
+}
+
+.loginContainer h3 {
+    font-family: sans-serif;
+    color: white;
+    font-size: 25px;
+}
+
+input[type=email],
+input[type=password] {
+    width: 225px;
+    height: 50px;
+    margin: 8px;
+    border-radius: 10px;
+    border: black solid 1px;
+}
+
+::placeholder {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+
+}
+
+.btn {
+    padding: 12px 8px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    width: 95px;
+    display: inline;
+    border: none;
+}
+
+.reset {
+    padding: 12px 8px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    width: 125px;
+    display: inline;
+    border: none;
+}
+
+.btn:hover {
+    background-color: whitesmoke;
+}

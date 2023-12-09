@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://www.gstatic.com/firebasejs/9.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js"></script>
+    <title>Techlogic | Register</title>
+</head>
+
+<body>
+    <div class="registerContainer">
+        <h3>Techlogic | Register</h3>
+        <form id="loginForm">
+            <input type="email" placeholder="Your email" name="email" id="email">
+            <input type="password" placeholder="Your password" name="password" id="password">
+            <br>
+            <button class="btn" onclick="register()" type="register">Register</button>
+        </form>
+    </div>
+    <script>
+        function register() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            firebase.auth().createUserWithEmailAndPassword(email, password)
+                .then(function (userCredential) {
+                    // Registered successfully
+                    var user = userCredential.user;
+                    console.log("User registered:", user);
+
+                    // Add further logic or redirect to a new page
+                })
+                .catch(function (error) {
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    console.error("Registration failed:", errorMessage);
+                });
+        }
+    </script>
+
+    <script src="firebase.js"></script>
+</body>
+
+</html>
