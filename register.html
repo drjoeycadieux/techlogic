@@ -13,7 +13,7 @@
 <body>
     <div class="registerContainer">
         <h3>Techlogic | Register</h3>
-        <form id="loginForm">
+        <form id="registerForm">
             <input type="email" placeholder="Your email" name="email" id="email">
             <input type="password" placeholder="Your password" name="password" id="password">
             <br>
@@ -24,6 +24,8 @@
         function register() {
             var email = document.getElementById('email').value;
             var password = document.getElementById('password').value;
+
+            document.getElementById('registerForm').innerHTML = registerForm;
 
             firebase.auth().createUserWithEmailAndPassword(email, password)
                 .then(function (userCredential) {
